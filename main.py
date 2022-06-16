@@ -10,10 +10,11 @@ positions = [3, 5, 7, 9, 11, 12, 15, 20, 25]
 j = 1
 
 for i in range(0,30):
-    list.append(0)
-    for item in positions:
-        if i == item:
-            list[i] = j
-            j += 1
+    if len(positions) and i == positions[0]:
+        positions.pop(0)
+        list.append(j)
+        j += 1
+    else:
+        list.append(0)
 
 print(list)
