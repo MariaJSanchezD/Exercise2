@@ -13,8 +13,7 @@ for i in range(0,30):
     list.append(0)
     for item in positions:
         if i == item:
-            list.pop(i)
-            list.insert(i, j)
+            list[i] = j
             j += 1
 
 print(list)
